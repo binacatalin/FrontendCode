@@ -8,10 +8,16 @@
                 </div>
                 <div class="panel-body">
                     <p>
+                        Scope ID: {{$id}}
+                    </p>
+                    <p>
                         Type something: <input type="text" ng-mode="firstVariable"/>
                     </p>
                     <p>
                         Your input: {{firstVariable}}
+                    </p>
+                    <p>
+                        <a class="btn btn-primary btn-lg" role="button" ng-click="restFirstVariable()">Reset input</a>
                     </p>
                     <p>
                         <a class="btn btn-primary btn-lg" role="button" ng-click="setFirstVariable('something')">Set input to
