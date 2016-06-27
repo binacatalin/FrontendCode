@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HR APP</title>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.css"/>
+</head>
+<!--------------------------------------------------------------------------------------------------------------------->
+<body>
+<h1>Math Application</h1>
+<div ng-app="hrApp">
+    <div ng-controller="MathController">
+        <p>Number A:<input type="number" ng-model="numA"></p>
+        <p>Number B:<input type="number" ng-model="numB"></p>
+
+        <p>Addition: <span ng-bind="numA + numB"></span></p>
+        <p>Subtraction: <span ng-bind="numA - numB"></span></p>
+        <p>Multiplication: <span ng-bind="numA * numB"></span></p>
+        <p>Division: <span ng-bind="numA / numB"></span></p>
+    </div>
+</div>
+<script type="text/javascript" src="bower_components/jquery/jquery.js"></script>
+<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="scripts/app.js"></script>
+<script type="text/javascript" src="scripts/MathController.js"></script>
+</body>
+</html>
+<!--------------------------------------------------------------------------------------------------------------------->
