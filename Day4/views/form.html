@@ -1,0 +1,31 @@
+<!--
+
+$pristine
+$dirty
+$valid
+$invalid
+$submitted
+$error
+
+-->
+
+<ng-form name="myForm" class="my-form">
+    type some input: <input name="input" ng-model="userType" required>
+    <span class="error" ng-hide="myForm.input.$pristine || !myForm.input.$error.required">*</span><br>
+
+    <br>
+    userType = {{userType}}<br>
+    <br>
+    myForm.$pristine = {{myForm.$pristine}}<br>
+    myForm.$dirty = {{myForm.$dirty}}<br>
+    myForm.$valid = {{myForm.$valid}}<br>
+    myForm.$invalid = {{myForm.$invalid}}<br>
+    myForm.$submitted = {{myForm.$submitted}}<br>
+    myForm.$error = {{myForm.$error}}<br>
+</ng-form>
+
+<div>
+    <p>Ana are mere (alta Ana)</p>
+    <a class="btn btn-primary btn-lg" role="button" ng-click="submitted()">Submit</a>
+    <p> {{submittMessage}}</p>
+</div>

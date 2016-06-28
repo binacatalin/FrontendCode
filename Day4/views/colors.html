@@ -1,0 +1,38 @@
+
+<div class="container">
+    <select ng-options="color as color.text for color in colors track by color.text" ng-model="selectedColor" ng-change="changeColor()"></select>
+
+    <select ng-options="color as color.text group by color.type for color in colors track by color.text" ng-model="selectedColor" ng-change="changeColor()"></select>
+
+    <span class="ng-class: selectedClass" >Some text:D</span>
+</div>
+
+<div class="container">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p> Ana are pere(iar ala Ana)</p>
+
+    <p>Input1:<input type="text" ng-model="filterInput"></p>
+    <!--<p>Input1:<input type="text" ng-model="filterInput.text"></p>-->
+
+    <p>Input2:<input type="text" ng-model="orderInput"></p>
+
+    <p>Colors are:</p>
+    <!--{-->
+    <!--"text": "muted",-->
+    <!--"class": "text-muted",-->
+    <!--"type": "strong"-->
+    <!--},-->
+
+    <div ng-repeat="color in colors | filter: filterInput | orderBy:orderInput">
+        <!--{{color.text}} ......... {{color.class}} ......... {{color.type}}-->
+        {{color}}
+    </div>
+
+</div>
